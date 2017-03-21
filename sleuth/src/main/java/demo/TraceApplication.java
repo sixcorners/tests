@@ -40,6 +40,11 @@ class HomeController {
 		return "hi/" + s;
 	}
 
+	@RequestMapping("/ex")
+	public String ex() {
+		log.info("ex");
+		throw new RuntimeException();
+	}
 }
 
 @RestController
